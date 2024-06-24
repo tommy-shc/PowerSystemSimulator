@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>networks.Switch.Switch &#8212; Power System Simulator 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=12dfc556" />
+    <script src="../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networks.ThreeWindingTransformer" href="networks.ThreeWindingTransformer.html" />
+    <link rel="prev" title="networks.Switch" href="networks.Switch.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="networks-switch-switch">
+<h1>networks.Switch.Switch<a class="headerlink" href="#networks-switch-switch" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networks.Switch.Switch">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">networks.Switch.</span></span><span class="sig-name descname"><span class="pre">Switch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bus_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">closed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_ka</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networks.Switch.Switch" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="networks.Element.Element.html#networks.Element.Element" title="networks.Element.Element"><code class="xref py py-class docutils literal notranslate"><span class="pre">Element</span></code></a></p>
+<p>Represents a switch element in a power system network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bus_id</strong> (<em>int</em>) – The ID of the bus where the switch is connected.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the switch.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The type of the switch.</p></li>
+<li><p><strong>closed</strong> (<em>bool</em>) – Whether the switch is closed or not.</p></li>
+<li><p><strong>base_freq</strong> (<em>float</em>) – The base frequency of the switch.</p></li>
+<li><p><strong>max_ka</strong> (<em>float</em>) – Maximum kiloampere rating of the switch.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networks.Switch.Switch.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bus_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">closed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">base_freq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_ka</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networks.Switch.Switch.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initializes a Switch object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bus_id</strong> (<em>int</em>) – The ID of the bus where the switch is connected.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of the switch.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The type of the switch.</p></li>
+<li><p><strong>closed</strong> (<em>bool</em>) – Whether the switch is closed or not.</p></li>
+<li><p><strong>base_freq</strong> (<em>float</em>) – The base frequency of the switch.</p></li>
+<li><p><strong>max_ka</strong> (<em>float</em>) – Maximum kiloampere rating of the switch.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#networks.Switch.Switch.__init__" title="networks.Switch.Switch.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(name, bus_id, type, closed, ...)</p></td>
+<td><p>Initializes a Switch object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#networks.Switch.Switch.get_name" title="networks.Switch.Switch.get_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_name</span></code></a>()</p></td>
+<td><p>Get the name of the element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#networks.Switch.Switch.get_property" title="networks.Switch.Switch.get_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_property</span></code></a>(var)</p></td>
+<td><p>Get a property of the generator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#networks.Switch.Switch.set_name" title="networks.Switch.Switch.set_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_name</span></code></a>(n)</p></td>
+<td><p>Set the name of the element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#networks.Switch.Switch.set_property" title="networks.Switch.Switch.set_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_property</span></code></a>(var, new)</p></td>
+<td><p>Set a property of the generator.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="networks.Switch.Switch.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networks.Switch.Switch.get_name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the name of the element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the element.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networks.Switch.Switch.get_property">
+<span class="sig-name descname"><span class="pre">get_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networks.Switch.Switch.get_property" title="Link to this definition">¶</a></dt>
+<dd><p>Get a property of the generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>var</strong> (<em>str</em>) – The name of the property to retrieve.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The value of the requested property.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or float or bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networks.Switch.Switch.set_name">
+<span class="sig-name descname"><span class="pre">set_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networks.Switch.Switch.set_name" title="Link to this definition">¶</a></dt>
+<dd><p>Set the name of the element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>n</strong> (<em>str</em>) – The new name for the element.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networks.Switch.Switch.set_property">
+<span class="sig-name descname"><span class="pre">set_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networks.Switch.Switch.set_property" title="Link to this definition">¶</a></dt>
+<dd><p>Set a property of the generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>var</strong> (<em>str</em>) – The name of the property to set.</p></li>
+<li><p><strong>new</strong> (<em>str</em><em> or </em><em>float</em><em> or </em><em>bool</em>) – The new value for the property.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A message indicating the success or failure of the operation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Power System Simulator</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="injections.html">injections</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="networks.html">networks</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="networks.Bus.html">networks.Bus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Element.html">networks.Element</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Generator.html">networks.Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Impedence.html">networks.Impedence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Line.html">networks.Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Load.html">networks.Load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Storage.html">networks.Storage</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="networks.Switch.html">networks.Switch</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networks.Switch.Switch</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#networks.Switch.Switch"><code class="docutils literal notranslate"><span class="pre">Switch</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#networks.Switch.Switch.__init__"><code class="docutils literal notranslate"><span class="pre">Switch.__init__()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#networks.Switch.Switch.get_name"><code class="docutils literal notranslate"><span class="pre">Switch.get_name()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#networks.Switch.Switch.get_property"><code class="docutils literal notranslate"><span class="pre">Switch.get_property()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#networks.Switch.Switch.set_name"><code class="docutils literal notranslate"><span class="pre">Switch.set_name()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#networks.Switch.Switch.set_property"><code class="docutils literal notranslate"><span class="pre">Switch.set_property()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="networks.ThreeWindingTransformer.html">networks.ThreeWindingTransformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Transformer.html">networks.Transformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.network.html">networks.network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="translators.html">translators</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="networks.html">networks</a><ul>
+  <li><a href="networks.Switch.html">networks.Switch</a><ul>
+      <li>Previous: <a href="networks.Switch.html" title="previous chapter">networks.Switch</a></li>
+      <li>Next: <a href="networks.ThreeWindingTransformer.html" title="next chapter">networks.ThreeWindingTransformer</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Dalle Ave Lab.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../_sources/_autosummary/networks.Switch.Switch.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,2 @@
+Docs building needs a _static directory. 
+Git needs something in that directory so it's uploaded.

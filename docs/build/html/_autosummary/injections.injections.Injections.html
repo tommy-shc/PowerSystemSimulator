@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>injections.injections.Injections &#8212; Power System Simulator 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=12dfc556" />
+    <script src="../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networks" href="networks.html" />
+    <link rel="prev" title="injections.injections.Injection" href="injections.injections.Injection.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="injections-injections-injections">
+<h1>injections.injections.Injections<a class="headerlink" href="#injections-injections-injections" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="injections.injections.Injections">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">injections.injections.</span></span><span class="sig-name descname"><span class="pre">Injections</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">load_injections</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generator_injections</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injections.injections.Injections" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">_DataLoaderFactory</span></code></p>
+<p>Set of injection objects</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>load_injections</strong> (<em>List</em><em>, </em><em>optional</em>) – List of load injection objects to represent loads, defaults to None</p></li>
+<li><p><strong>generator_injections</strong> (<em>List</em><em>, </em><em>optional</em>) – List of injection objects to represent generators, defaults to None</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="injections.injections.Injections.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">load_injections</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">generator_injections</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injections.injections.Injections.__init__" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#injections.injections.Injections.__init__" title="injections.injections.Injections.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([load_injections, generator_injections])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#injections.injections.Injections.load" title="injections.injections.Injections.load"><code class="xref py py-obj docutils literal notranslate"><span class="pre">load</span></code></a>(data_loader_name, directory)</p></td>
+<td><p>Loads the injection data using the specified data_loader_name from the specified directory</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#injections.injections.Injections.to_dataframe" title="injections.injections.Injections.to_dataframe"><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_dataframe</span></code></a>()</p></td>
+<td><p>Converts the injections to a pandas dataframe</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="injections.injections.Injections.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_loader_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#injections.injections.Injections.load" title="Link to this definition">¶</a></dt>
+<dd><p>Loads the injection data using the specified data_loader_name from the specified directory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_loader_name</strong> (<em>string</em>) – File type to load the data from (csv)</p></li>
+<li><p><strong>directory</strong> (<em>string</em>) – relative path (from the folder where the code is run) to the directory containing the injection data</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="injections.injections.Injections.to_dataframe">
+<span class="sig-name descname"><span class="pre">to_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#injections.injections.Injections.to_dataframe" title="Link to this definition">¶</a></dt>
+<dd><p>Converts the injections to a pandas dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Injection data as a dictionary of pandas dataframes named “load” and “generator”</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary of pandas dataframes</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Power System Simulator</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="injections.html">injections</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="injections.injections.html">injections.injections</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="injections.injections.Injection.html">injections.injections.Injection</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">injections.injections.Injections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#injections.injections.Injections"><code class="docutils literal notranslate"><span class="pre">Injections</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#injections.injections.Injections.__init__"><code class="docutils literal notranslate"><span class="pre">Injections.__init__()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#injections.injections.Injections.load"><code class="docutils literal notranslate"><span class="pre">Injections.load()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#injections.injections.Injections.to_dataframe"><code class="docutils literal notranslate"><span class="pre">Injections.to_dataframe()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="networks.html">networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="translators.html">translators</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="injections.html">injections</a><ul>
+  <li><a href="injections.injections.html">injections.injections</a><ul>
+      <li>Previous: <a href="injections.injections.Injection.html" title="previous chapter">injections.injections.Injection</a></li>
+      <li>Next: <a href="networks.html" title="next chapter">networks</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Dalle Ave Lab.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../_sources/_autosummary/injections.injections.Injections.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

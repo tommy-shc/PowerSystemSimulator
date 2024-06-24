@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>networks.Line.Line &#8212; Power System Simulator 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=12dfc556" />
+    <script src="../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="networks.Load" href="networks.Load.html" />
+    <link rel="prev" title="networks.Line" href="networks.Line.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="networks-line-line">
+<h1>networks.Line.Line<a class="headerlink" href="#networks-line-line" title="Link to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="networks.Line.Line">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">networks.Line.</span></span><span class="sig-name descname"><span class="pre">Line</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_bus_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_bus_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_loading_percent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_ohm_per_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_ohm_per_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c_nf_per_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r0_ohm_per_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0_ohm_per_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c0_nf_per_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_parallel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derating_factor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phases</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networks.Line.Line" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="networks.Element.Element.html#networks.Element.Element" title="networks.Element.Element"><code class="xref py py-class docutils literal notranslate"><span class="pre">Element</span></code></a></p>
+<p>Represents a transmission line in a power system network.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the line.</p></li>
+<li><p><strong>from_bus_id</strong> (<em>int</em>) – The ID of the “from” bus of the line.</p></li>
+<li><p><strong>to_bus_id</strong> (<em>int</em>) – The ID of the “to” bus of the line.</p></li>
+<li><p><strong>length_km</strong> (<em>float</em>) – Length of the line in kilometers.</p></li>
+<li><p><strong>max_loading_percent</strong> (<em>float</em>) – Maximum loading percentage of the line.</p></li>
+<li><p><strong>r_ohm_per_km</strong> (<em>float</em>) – Resistance of the line per kilometer in ohms.</p></li>
+<li><p><strong>x_ohm_per_km</strong> (<em>float</em>) – Reactance of the line per kilometer in ohms.</p></li>
+<li><p><strong>c_nf_per_km</strong> (<em>float</em>) – Capacitance of the line per kilometer in nanofarads.</p></li>
+<li><p><strong>r0_ohm_per_km</strong> (<em>float</em>) – Zero sequence resistance of the line per kilometer in ohms.</p></li>
+<li><p><strong>x0_ohm_per_km</strong> (<em>float</em>) – Zero sequence reactance of the line per kilometer in ohms.</p></li>
+<li><p><strong>c0_nf_per_km</strong> (<em>float</em>) – Zero sequence capacitance of the line per kilometer in nanofarads.</p></li>
+<li><p><strong>norm_amp</strong> (<em>float</em>) – Nominal ampacity of the line.</p></li>
+<li><p><strong>max_amp</strong> (<em>float</em>) – Maximum ampacity of the line.</p></li>
+<li><p><strong>num_parallel</strong> (<em>int</em>) – Number of parallel lines.</p></li>
+<li><p><strong>derating_factor</strong> (<em>float</em>) – Derating factor of the line.</p></li>
+<li><p><strong>phases</strong> (<em>str</em>) – Phases of the line.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="networks.Line.Line.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from_bus_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_bus_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">length_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_loading_percent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r_ohm_per_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_ohm_per_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c_nf_per_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r0_ohm_per_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0_ohm_per_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c0_nf_per_km</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">norm_amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_amp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_parallel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">derating_factor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phases</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networks.Line.Line.__init__" title="Link to this definition">¶</a></dt>
+<dd><p>Initializes a Line object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the line.</p></li>
+<li><p><strong>from_bus_id</strong> (<em>int</em>) – The ID of the “from” bus of the line.</p></li>
+<li><p><strong>to_bus_id</strong> (<em>int</em>) – The ID of the “to” bus of the line.</p></li>
+<li><p><strong>length_km</strong> (<em>float</em>) – Length of the line in kilometers.</p></li>
+<li><p><strong>max_loading_percent</strong> (<em>float</em>) – Maximum loading percentage of the line.</p></li>
+<li><p><strong>r_ohm_per_km</strong> (<em>float</em>) – Resistance of the line per kilometer in ohms.</p></li>
+<li><p><strong>x_ohm_per_km</strong> (<em>float</em>) – Reactance of the line per kilometer in ohms.</p></li>
+<li><p><strong>c_nf_per_km</strong> (<em>float</em>) – Capacitance of the line per kilometer in nanofarads.</p></li>
+<li><p><strong>r0_ohm_per_km</strong> (<em>float</em>) – Zero sequence resistance of the line per kilometer in ohms.</p></li>
+<li><p><strong>x0_ohm_per_km</strong> (<em>float</em>) – Zero sequence reactance of the line per kilometer in ohms.</p></li>
+<li><p><strong>c0_nf_per_km</strong> (<em>float</em>) – Zero sequence capacitance of the line per kilometer in nanofarads.</p></li>
+<li><p><strong>norm_amp</strong> (<em>float</em>) – Nominal ampacity of the line.</p></li>
+<li><p><strong>max_amp</strong> (<em>float</em>) – Maximum ampacity of the line.</p></li>
+<li><p><strong>num_parallel</strong> (<em>int</em>) – Number of parallel lines.</p></li>
+<li><p><strong>derating_factor</strong> (<em>float</em>) – Derating factor of the line.</p></li>
+<li><p><strong>phases</strong> (<em>str</em>) – Phases of the line.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#networks.Line.Line.__init__" title="networks.Line.Line.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(name, from_bus_id, to_bus_id, ...)</p></td>
+<td><p>Initializes a Line object.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#networks.Line.Line.get_name" title="networks.Line.Line.get_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_name</span></code></a>()</p></td>
+<td><p>Get the name of the element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#networks.Line.Line.get_property" title="networks.Line.Line.get_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_property</span></code></a>(var)</p></td>
+<td><p>Get a property of the generator.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#networks.Line.Line.set_name" title="networks.Line.Line.set_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_name</span></code></a>(n)</p></td>
+<td><p>Set the name of the element.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#networks.Line.Line.set_property" title="networks.Line.Line.set_property"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_property</span></code></a>(var, new)</p></td>
+<td><p>Set a property of the generator.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="networks.Line.Line.get_name">
+<span class="sig-name descname"><span class="pre">get_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#networks.Line.Line.get_name" title="Link to this definition">¶</a></dt>
+<dd><p>Get the name of the element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the element.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networks.Line.Line.get_property">
+<span class="sig-name descname"><span class="pre">get_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networks.Line.Line.get_property" title="Link to this definition">¶</a></dt>
+<dd><p>Get a property of the generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>var</strong> (<em>str</em>) – The name of the property to retrieve.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The value of the requested property.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str or float or bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networks.Line.Line.set_name">
+<span class="sig-name descname"><span class="pre">set_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networks.Line.Line.set_name" title="Link to this definition">¶</a></dt>
+<dd><p>Set the name of the element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>n</strong> (<em>str</em>) – The new name for the element.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="networks.Line.Line.set_property">
+<span class="sig-name descname"><span class="pre">set_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#networks.Line.Line.set_property" title="Link to this definition">¶</a></dt>
+<dd><p>Set a property of the generator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>var</strong> (<em>str</em>) – The name of the property to set.</p></li>
+<li><p><strong>new</strong> (<em>str</em><em> or </em><em>float</em><em> or </em><em>bool</em>) – The new value for the property.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A message indicating the success or failure of the operation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Power System Simulator</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="injections.html">injections</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="networks.html">networks</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="networks.Bus.html">networks.Bus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Element.html">networks.Element</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Generator.html">networks.Generator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Impedence.html">networks.Impedence</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="networks.Line.html">networks.Line</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">networks.Line.Line</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#networks.Line.Line"><code class="docutils literal notranslate"><span class="pre">Line</span></code></a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#networks.Line.Line.__init__"><code class="docutils literal notranslate"><span class="pre">Line.__init__()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#networks.Line.Line.get_name"><code class="docutils literal notranslate"><span class="pre">Line.get_name()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#networks.Line.Line.get_property"><code class="docutils literal notranslate"><span class="pre">Line.get_property()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#networks.Line.Line.set_name"><code class="docutils literal notranslate"><span class="pre">Line.set_name()</span></code></a></li>
+<li class="toctree-l5"><a class="reference internal" href="#networks.Line.Line.set_property"><code class="docutils literal notranslate"><span class="pre">Line.set_property()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Load.html">networks.Load</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Storage.html">networks.Storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Switch.html">networks.Switch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.ThreeWindingTransformer.html">networks.ThreeWindingTransformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.Transformer.html">networks.Transformer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="networks.network.html">networks.network</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="translators.html">translators</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="networks.html">networks</a><ul>
+  <li><a href="networks.Line.html">networks.Line</a><ul>
+      <li>Previous: <a href="networks.Line.html" title="previous chapter">networks.Line</a></li>
+      <li>Next: <a href="networks.Load.html" title="next chapter">networks.Load</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Dalle Ave Lab.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../_sources/_autosummary/networks.Line.Line.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
